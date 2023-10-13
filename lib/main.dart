@@ -31,7 +31,37 @@ class MyApp extends StatelessWidget {
                 Text("data 3"),
                 Text("data 4"),
               ],
-            )
+            ),
+            Column(
+              children: [
+                Row(
+                  children: List.generate(5, (index) {
+                    return Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: index % 2 == 0 ? Colors.blue : Colors.green,
+                      ),
+                      margin: EdgeInsets.all(1),
+                    );
+                  }),
+                ),
+                Row(
+                  children: List.generate(5, (index) {
+                    return Container(
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: index % 2 == 0 ? Colors.blue : Colors.green,
+                      ),
+                      margin: EdgeInsets.all(1),
+                    );
+                  }),
+                ),
+              ],
+            ),
           ],
         ),
       ),
